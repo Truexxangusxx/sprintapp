@@ -18,43 +18,58 @@ $("#btnmostrar").click(function () {
 })
 
 
-var app = new Vue({
-    el: '#app',
-    data: {
-        message: "hello bitches"
-    }
-})
-
-var app3 = new Vue({
-    el: '#app-3',
-    data: {
-        seen: false
-    }
-})
-
-var app4 = new Vue({
-    el: '#app-4',
-    data: {
-        todos: [
-            { text: 'Learn JavaScript' },
-            { text: 'Learn Vue' },
-            { text: 'Build something awesome' }
-        ]
-    }
-})
 
 
-Vue.component('mycomponent', {
+Vue.component('history', {
+    props: ["text",'history'],
     template:`
-        <div>
-            <h1>welcome to my component</h1>        
-            <h2>this es the sub title</h2>
-            <p>this es my component text</p>
+    <div class="history container-fluid">
+    <div class="title row">
+        <div class="col-6">
+            <h5>{{history}}</h5>
         </div>
+        <div class="col-6" style="text-align:right">
+            <h5>Epic 2231</h5>
+        </div>
+    </div>
+    <div class="row text">
+        <div class="col">
+            <p>
+                {{text}}
+            </p>
+        </div>
+    </div>
+    <a href="#">
+        <div class="task done"></div>
+    </a>
+    <a href="#">
+        <div class="task done"></div>
+    </a>
+    <a href="#">
+        <div class="task process"></div>
+    </a>
+    <a href="#">
+        <div class="task"></div>
+    </a>
+    <a href="#">
+        <div class="task"></div>
+    </a>
+</div>
     `
 });
 
-
 new Vue({
-    el: "#component"
-});
+    el: '#app',
+    data:{
+        historias:[
+            {history:'historia 1', text:'parrafo de la historia 1'},
+            {history:'historia 1', text:'parrafo de la historia 1'},
+            {history:'historia 1', text:'parrafo de la historia 1'},
+            {history:'historia 1', text:'parrafo de la historia 1'},
+            {history:'historia 1', text:'parrafo de la historia 1'},
+            {history:'historia 1', text:'parrafo de la historia 1'},
+            {history:'historia 1', text:'parrafo de la historia 1'},
+            {history:'historia 2', text:'parrafo de la historia 2'}
+        ]
+    }
+  })

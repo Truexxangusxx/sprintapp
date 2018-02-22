@@ -14,48 +14,22 @@
 <body>
 
 
-    <div class="container-fluid">
+    <div id="app" class="container-fluid">
 
         <div class="row">
-            <div class="col-8"></div>
-            <div class="historys col-4">
-                <div class="history container-fluid">
-                    <div class="title row">
-                        <div class="col-6">
-                            <h5>History 0005</h5>
-                        </div>
-                        <div class="col-6" style="text-align:right">
-                            <h5>Epic 2231</h5>
-                        </div>
+            <div class="principal col-12 col-sm-4 col-md-6 col-lg-8 order-2 order-sm-1">
+
+                <div class="container-fluid">
+                    <div class="row">
+
                     </div>
-                    <div class="row text">
-                        <div class="col">
-                            <p>
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum." Sección 1.10.32 de "de Finibus Bonoru
-                            </p>
-                        </div>
-                    </div>
-                    <a href="#">
-                        <div class="task done"></div>
-                    </a>
-                    <a href="#">
-                        <div class="task done"></div>
-                    </a>
-                    <a href="#">
-                        <div class="task process"></div>
-                    </a>
-                    <a href="#">
-                        <div class="task"></div>
-                    </a>
-                    <a href="#">
-                        <div class="task"></div>
-                    </a>
                 </div>
 
+            </div>
+            <div class="historys col-12 col-sm-8 col-md-6 col-lg-4 order-1 order-sm-2">
+                <div v-for="historia in historias">
+                    <history  v-bind:text="historia.text" v-bind:history="historia.history"></history>
+                </div>
             </div>
 
         </div>

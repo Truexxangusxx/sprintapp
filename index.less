@@ -2,16 +2,23 @@ body {
     background: #444;
 }
 
+.principal {
+    background: bisque;
+}
+
 .historys {
+    background: cadetblue;
     padding: 10px;
     .history {
+        margin-top: 10px;
         background: tan;
         border-radius: 10px;
         padding: 10px;
         height: 250px;
         font-size: 14px;
-        .text{
-            height: 175px;
+        .text {
+            height: 170px;
+            overflow: hidden;
         }
         a {
             .task {
@@ -21,10 +28,10 @@ body {
                 float: left;
                 margin-right: 10px;
                 &.done {
-                    background:teal;
+                    background: teal;
                 }
                 &.process {
-                    background:steelblue;
+                    background: steelblue;
                 }
             }
         }
